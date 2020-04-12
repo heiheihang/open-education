@@ -1,0 +1,9 @@
+{% if student_list %}
+    <ul>
+    {% for student in student_list %}
+        <li><a href="{% url 'mllearning:student_detail' student.student_id %}">{{ student.student_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No students are available.</p>
+{% endif %}
