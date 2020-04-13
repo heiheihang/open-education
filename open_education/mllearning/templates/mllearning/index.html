@@ -7,3 +7,8 @@
 {% else %}
     <p>No students are available.</p>
 {% endif %}
+{% if problem %}
+{% for p in problem %}
+<a href="{% url 'mllearning:problem_detail' p.problem_id %}">{{ p.problem_text }}</a>
+{% endfor %}
+{% endif %}
